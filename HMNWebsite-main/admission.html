@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>HMN College - Junior College</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Box Styles */
+        .box {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center; /* Vertically center align items */
+            transition: background-color 0.3s, transform 0.3s;
+            overflow: hidden; /* Ensures no overflow from child elements */
+        }
+
+        .box:hover {
+            background-color: #e2e6ea;
+            transform: scale(1.02);
+        }
+
+        .box .icon {
+            font-size: 2em;
+            margin-right: 25px; /* Space between icon and content */
+            color: #007bff;
+        }
+
+        .box .content {
+            flex: 1; /* Allow content to take the remaining space */
+        }
+
+        /* Container Styles */
+        .containerBox {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding is included in the total width */
+        }
+
+        /* Responsive Styles for Mobile */
+        @media (max-width: 768px) {
+            .containerBox {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+        }
+
+        /* Title Styling */
+        .box h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            word-wrap: break-word; /* Prevents text overflow in table cells */
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* List Styles */
+        ul.two-column {
+            columns: 2;
+            padding: 0;
+            list-style: disc; /* Adds bullet points */
+            margin: 0;
+        }
+
+        ul.two-column li {
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            /* Box Styles */
+            .box {
+                flex-direction: column; /* Stack icon and content vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            .box .icon {
+                margin-right: 0; /* Remove margin to stack vertically */
+                margin-bottom: 10px; /* Add space between icon and content */
+            }
+
+            .box h2 {
+                font-size: 1.25em; /* Adjust heading size for smaller screens */
+                text-align: left; /* Align heading text to the left */
+            }
+
+            /* Table Styles */
+            table {
+                width: 100%;
+                overflow-x: auto; /* Add horizontal scrolling for tables if needed */
+            }
+
+            th, td {
+                font-size: 0.875em; /* Adjust font size for better readability */
+                padding: 8px; /* Reduce padding for smaller screens */
+            }
+
+            /* List Styles */
+            ul.two-column {
+                columns: 1; /* Stack items in a single column on small screens */
+                column-gap: 0; /* Remove gap between columns */
+            }
+        }
+
+    </style>
+    </head>
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+            <!-- Topbar Start -->
+            <!-- <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                                class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                                class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                                class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+                                class="fab fa-youtube fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
+                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i
+                                        class="fa fa-home me-2"></i> My Dashboard</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+
+                <img src="img/hmnlogo.png" alt="Logo">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ABOUT</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="aboutus.html" class="dropdown-item">ABOUT US
+</a>
+                            <a href="facilities.html" class="dropdown-item">FACILITIES</a>
+                            <a href="collegestaff.html" class="dropdown-item">COLLEGE STAFF</a>
+                        </div>
+                    </div>
+                    <a href="admission.html" class="nav-item nav-link">ADMISSION</a>
+                    <a href="events.html" class="nav-item nav-link">EVENTS</a>
+                    <a href="notices.html" class="nav-item nav-link">NOTICES</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OTHER PROGRAMS ON
+                            CAMPUS</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="https://bmncollege.com/" class="dropdown-item" target="_blank">HOME SCIENCE</a>
+                            <a href="https://www.bmncollege.com/programsoffered/" class="dropdown-item"
+                                target="_blank">COMPUTER APPLICATION</a>
+                            <a href="https://kgshahlawschool.com/" class="dropdown-item" target="_blank">KG SHAH LAW
+                                COLLEGE</a>
+                            <a href="https://smescon.in/" class="dropdown-item" target="_blank">NURSING</a>
+                            <a href="https://mmpshahcollege.in/" class="dropdown-item" target="_blank">ARTS AND
+                                COMMERECE</a>
+                            <a href="https://hmnscnip.in/polytechnic.php" class="dropdown-item"
+                                target="_blank">POLYTECHNIC</a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Contact</a>
+            </div>
+        </nav>
+    </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4">ADMISSION</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <!--<li class="breadcrumb-item"><a href="#">Pages</a></li>-->
+                    <li class="breadcrumb-item active text-white">Admission</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Services Start -->
+        <div class="container-fluid bg-light service py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Admission Guidelines</h5>
+                    <h1 class="mb-0" style="font-size: 25px;">ADMISSION WILL BE DIRECT (OFFLINE)</h1>
+                </div>
+            
+                <!-- Admission Start -->
+                <div class="containerBox">
+                    <!-- Box 1 -->
+                    <div class="box">
+                        <i class="icon fas fa-info-circle"></i>
+                        <div class="content">
+                            <h2>Documents Required</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <ol>
+                                <li>Original SSC mark sheet with two photocopies.</li>
+                                <li>Original School Leaving Certificate with two photocopies.</li>
+                                <li>Two photocopies of the first and last page of the ration card.</li>
+                                <li>Provisional Eligibility Certificate to be submitted by students from other States or Boards (CBSE/ICSC/NIOS/IBM).</li>
+                                <li>Aadhaar card photocopy (Students and Parents).</li>
+                                <li>Bank passbook front page photocopy.</li>
+                            </ol>
+                        </div>
+                    </div>
+            
+                    <!-- Box 2 -->
+                    <div class="box">
+                        <i class="icon fas fa-book"></i>
+                        <div class="content">
+                            <h2>Course</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <ul>
+                                <li>MEDIUM OF INSTRUCTION: ENGLISH</li>
+                            </ul>
+                            <ul>
+                                <li>COURSE DURATION: TWO YEARS</li>
+                                <ul>
+                                    <li>FIRST YEAR: FYJC (XI)</li>
+                                    <li>SECOND YEAR: SYJC (XII)</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Box 3 with Table -->
+                    <div class="box">
+                        <i class="icon fas fa-table"></i>
+                        <div class="content">
+                            <h2>Subjects Offered</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">FYJC (XI) & SYJC (XII)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ENGLISH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HINDI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CHEMISTRY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>BIOLOGY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FOOD SCIENCE AND TECHNOLOGY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HOME MANAGEMENT</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ENVIRONMENTAL STUDIES</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HEALTH AND PHYSICAL EDUCATION</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+    
+                    <!-- Box 4 -->
+                    <div class="box">
+                        <i class="icon fas fa-calendar-alt"></i>
+                        <div class="content">
+                            <h2>Examination</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <ol>
+                                <li>All the exams for FYJC will be conducted by the college. Four exams conducted will be- Two Unit Test of 25 marks each, terminal of 50 marks and 100 marks (70 marks Theory and 30 marks Practical).</li>
+                                <br>
+                                <li>Exams for SYJC-Unit Test, Terminal & Prelim will be conducted by the college. Final Exam will be the HSC Board Exam By Maharashtra Board.</li>
+                                <br>
+                                <li>Subject related project and assignments and practicals are mandatory.</li>
+                            </ol>
+                        </div>
+                    </div>
+            
+                    <!-- Box 5 with List -->
+                    <div class="box">
+                        <i class="icon fas fa-list-ul"></i>
+                        <div class="content">
+                            <h2>Unique Features</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <ul class="two-column">
+                                <li>FOCUS ON ACADEMIC EXCELLENCE</li>
+                                <li>STUDENT ORIENTED TEACHING</li>
+                                <li>DEDICATED TEACHERS</li>
+                                <li>GREEN CLUB</li>
+                                <li>SPORTS</li>
+                                <li>NSS</li>
+                                <li>CAREER COUNSELLING</li>
+                                <li>SMART CLASSROOMS</li>
+                                <li>LIBRARY FACILITIES</li>
+                                <li>COUNSELLOR ON CAMPUS</li>
+                                <li>KARATE / SELF DEFENCE</li>
+                                <li>CULTURAL ACTIVITIES</li>
+                                <li>LANGUAGE CLUB</li>
+                                <li>SEMINARS & WORKSHOPS</li>
+                                <li>HEALTH COUNSELLING</li>
+                                <li>GYMNASIUM</li>
+                                <li>FIELD VISITS AND EXCURSIONS</li>
+                                <li>UPGRADED LABORATORY</li>
+                            </ul>
+                        </div>
+                    </div>                    
+            
+                    <!-- Box 6 -->
+                    <div class="box">
+                        <i class="icon fas fa-comments"></i>
+                        <div class="content">
+                            <h2>Attendance</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <p>75% Attendance is mandatory for theory and practical. In case of absentee, prior permission of authority is to be obtained. A medical certificate is to be submitted in case of sickness.</p>
+                        </div>
+                    </div>                    
+            
+                    <!-- Box 7 -->
+                    <div class="box">
+                        <i class="icon fas fa-address-card"></i>
+                        <div class="content">
+                            <h2>Rules Regarding Refund of Fees</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <ol>
+                                <li>If the student informs the institution before the commencement of the academic year a full amount of tuition fees & deposit will be refunded (As per government's circular no. HSC/1679/Xx-Xxi Dated 31-8-1977).</li>
+                                <br>
+                                <li>If the student informs the institution after the commencement of the academic year, the institution should retain the tuition fees, for the month in which the student has applied for a refund of fees.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Box 8 -->
+                    <div class="box">
+                        <i class="icon fas fa-address-card"></i>
+                        <div class="content">
+                            <h2>Rules & Regulations</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <ol>
+                                <li>Students must come to college at 7.50 a.m. However, ten minutes late entry will be permitted in special cases with the concurrence of the concerned subject teacher.</li>
+                                <br>
+                                <li>75% attendance is compulsory for Theory/Practical separately. The journals of students with more than 20% absenteeism will not be certified and they will not be allowed to appear for the Final Exam.</li>
+                                <br>
+                                <li>In case of any difficulty with the subject the students are requested to discuss with their respective class representative and also with the concerned subject teacher and if no solution is obtained then they should contact the class teacher. In case the problem is still not solved only then, they should contact the Jr. College In-charge for the same.</li>
+                                <br>
+                                <li>All submissions have to be completed on time as per the date specified by the teacher.</li>
+                                <br>
+                                <li>If a student is attending any other activity during a lecture she is required to inform the class teacher and in-charge in writing without fail.</li>
+                                <br>
+                                <li>The Institution is not responsible for any loss of money or belongings of the students. The students are advised not to carry too much money and to take care of their own belongings.</li>
+                                <br>
+                                <li>A Medical Certificate with supporting documents will be accepted by the Class Teacher, in case of any serious illness only.</li>
+                                <br>
+                                <li>We aim for the all-around development of our students. Hence, students are expected to actively participate in the various activities held in the college.</li>
+                                <br>
+                                <li>Use of Mobile Phones will not be allowed in the classrooms/labs and a fine of Rs. 500/- will be imposed, in case a student is found using a mobile during class hours.</li>
+                                <br>
+                                <li>All the students are required to follow the dress code. (Short dresses and low necklines will not be allowed)</li>
+                                <br>
+                                <li>All Parents are most welcome to come and meet the In-charge in case of any difficulty between 10.00 a.m. and 02.00 p.m.</li>
+                                <br>
+                                <li>Students must maintain discipline while in the college to assist in the smooth functioning of the institution.</li>
+                                <br>
+                                <li>It is mandatory to wear I-card in the college campus.</li>
+                                <br>
+                            </ol>
+                            <h1 style="font-size: 1.2rem; color: #d32f2f; text-align: center; margin: 10px auto; max-width: 90%; line-height: 1.5;">
+                                IT IS OBLIGATORY FOR ALL STUDENTS TO STRICTLY ABIDE BY ALL THE ABOVE RULES AND REGULATIONS.
+                            </h1>
+                            <h1 style="font-size: 1.2rem; color: #d32f2f; text-align: center; margin: 10px auto; max-width: 90%; line-height: 1.5;">
+                                YOUR CO-OPERATION IS OUR STRENGTH.
+                            </h1>
+                        </div>
+                    </div>
+
+                    <!-- Box 9 -->
+                    <div class="box">
+                        <i class="icon fas fa-file-alt"></i>
+                        <div class="content">
+                            <h2>Anti Ragging Cell</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <p><strong>Anti Ragging cell -</strong> The Supreme Court has declared ragging as a crime and has banned ragging in all educational institutions. A student can be expelled from the institution if found ragging. A committee has been formulated to prevent ragging in the institution. Any such incidence can be reported to the Principal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Box 6 -->
+                    <div class="box" style="display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px;">
+                        <i class="icon fas fa-comments"></i>
+                        <div class="content" style="width: 100%; max-width: 800px;">
+                            <h2 style="text-align: center;">Career Counselling</h2>
+                            <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                            <iframe src="img/HMN Career Counselling PPT  NEW (1).pdf" style="border: none; width: 100%; height: 400px;"></iframe>
+                        </div>
+                    </div>
+                    <style>
+                        /* General Styles */
+                        .box {
+                            padding: 20px;
+                        }
+                    
+                        .content h2 {
+                            font-size: 1.5rem;
+                        }
+                    
+                        .content iframe {
+                            width: 100%;
+                            max-width: 800px;
+                            height: 400px;
+                        }
+                    
+                        /* Responsive Design */
+                        @media (max-width: 768px) {
+                            .content h2 {
+                                font-size: 1.2rem;
+                            }
+                    
+                            .content iframe {
+                                height: 300px;
+                            }
+                        }
+                    
+                        @media (max-width: 480px) {
+                            .content h2 {
+                                font-size: 1rem;
+                            }
+                    
+                            .content iframe {
+                                height: 200px;
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+        <!-- Admission End -->
+
+        <!-- Testimonial Start -->
+        <!--<div class="container-fluid testimonial py-5">
+            <div class="container py-5">
+                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                    <h5 class="section-title px-3">Testimonial</h5>
+                    <h1 class="mb-0">Our Clients Say!!!</h1>
+                </div>
+                <div class="testimonial-carousel owl-carousel">
+                    <div class="testimonial-item text-center rounded pb-4">
+                        <div class="testimonial-comment bg-light rounded p-4">
+                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            </p>
+                        </div>
+                        <div class="testimonial-img p-1">
+                            <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="Image">
+                        </div>
+                        <div style="margin-top: -35px;">
+                            <h5 class="mb-0">John Abraham</h5>
+                            <p class="mb-0">New York, USA</p>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center rounded pb-4">
+                        <div class="testimonial-comment bg-light rounded p-4">
+                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            </p>
+                        </div>
+                        <div class="testimonial-img p-1">
+                            <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="Image">
+                        </div>
+                        <div style="margin-top: -35px;">
+                            <h5 class="mb-0">John Abraham</h5>
+                            <p class="mb-0">New York, USA</p>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center rounded pb-4">
+                        <div class="testimonial-comment bg-light rounded p-4">
+                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            </p>
+                        </div>
+                        <div class="testimonial-img p-1">
+                            <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="Image">
+                        </div>
+                        <div style="margin-top: -35px;">
+                            <h5 class="mb-0">John Abraham</h5>
+                            <p class="mb-0">New York, USA</p>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center rounded pb-4">
+                        <div class="testimonial-comment bg-light rounded p-4">
+                            <p class="text-center mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis nostrum cupiditate, eligendi repellendus saepe illum earum architecto dicta quisquam quasi porro officiis. Vero reiciendis,
+                            </p>
+                        </div>
+                        <div class="testimonial-img p-1">
+                            <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle" alt="Image">
+                        </div>
+                        <div style="margin-top: -35px;">
+                            <h5 class="mb-0">John Abraham</h5>
+                            <p class="mb-0">New York, USA</p>
+                            <div class="d-flex justify-content-center">
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                                <i class="fas fa-star text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Testimonial End -->
+
+     
+        <!-- Footer Start -->
+    <div class="container-fluid footer py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Column 1: Location, Address, Mobile Number, Email -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Get In Touch</h4>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.767730043448!2d72.85765067438115!3d19.02854541386988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2f051bdd6f%3A0xf26f202e33ba0e2b!2sDr.%20BMN%20College%20of%20Home%20Science!5e0!3m2!1sen!2sin!4v1682412382911!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p class="mt-3" style="font-size: 16px;">
+                            <i class="fas fa-home me-2"></i> 338, R. A. Kidwai Road, <br> Matunga, Mumbai-400 019
+                        </p>
+                        <a href="tel:+02224095792" class="text-white mt-2" style="font-size: 16px;">
+                            <i class="fas fa-phone me-2"></i> +(022) 24095792
+                        </a>
+                        <a href="mailto:hmn@college.com" class="text-white mt-2" style="font-size: 16px;">
+                            <i class="fas fa-envelope me-2"></i> hmn@college.com
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Quick Links</h4>
+                        <a href="index.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> HOME</a>
+                        <a href="aboutus.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> ABOUT</a>
+                        <a href="facilities.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> FACILITIES</a>
+                        <a href="admission.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> ADMISSION</a>
+                        <a href="events.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> EVENTS</a>
+                        <a href="notice.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> NOTICES</a>
+                        <a href="contact.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> CONTACT</a>
+                        
+                    </div>
+                </div>
+                <!-- Column 3: Important Links -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Important Links</h4>
+                        <a href="https://www.maharashtra.gov.in/1125/Home" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> Government of Maharashtra
+                        </a>
+                        <a href="https://sndt.ac.in/" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> SNDT Women's University
+                        </a>
+                        <a href="https://www.education.gov.in/en" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> Ministry of Education
+                        </a>
+                        <a href="https://scholarships.gov.in/" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> National Scholarship Portal
+                        </a>
+                        <a href="https://www.academicdepository.com/NAD/uidStudentReg.action?activePage=regactuidStudentReg" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> National Academic Depository
+                        </a>
+                        <a href="http://rusa.nic.in/" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> Rashtriya Uchchatar Shiksha Abhiyan
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 4: Quick Links -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Other Programs on Campus</h4>
+                        <a href="https://bmncollege.com/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> HOME SCIENCE</a>
+                        <a href="https://www.bmncollege.com/programsoffered/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> COMPUTER APPLICATION</a>
+                        <a href="https://kgshahlawschool.com/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> KG SHAH LAW COLLEGE</a>
+                        <a href="https://smescon.in/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> NURSING</a>
+                        <a href="https://mmpshahcollege.in/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> ARTS AND COMMERCE</a>
+                        <a href="https://hmnscnip.in/polytechnic.php" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> POLYTECHNIC</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right
+                    reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <!-- Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

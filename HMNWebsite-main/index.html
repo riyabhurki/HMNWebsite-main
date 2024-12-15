@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HMN College- Junior College</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+
+        /* Popup container */
+        .popup-box {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Popup content */
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Popup header */
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Close button */
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            color: #f44336;
+        }
+
+        /* Contact section inside popup */
+        .popup-contact {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        form .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .btn.back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+        }
+        
+
+    </style>
+    
+</head>
+
+<body>
+    <!--popup-
+    <div id="popup" class="popup-box">
+        <div class="popup-content">
+            Popup header
+            <div class="popup-header">
+                <span>ADMISSION 2024-25</span>
+                <button id="closePopup" class="close-btn">&times;</button>
+            </div>
+    
+           Contact Information
+            <div class="popup-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone me-2"></i>
+                    <span>022 2409 5792 / 022 2403 5296</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope me-2"></i>
+                    <span>admission@bmncollege.com</span>
+                </div>
+            </div>
+    
+             Form 
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Contact Number" required>
+                <input type="email" placeholder="Email Id" required>
+                <input type="text" placeholder="City" required>
+                <select required>
+                    <option value="" disabled selected>Select Programs</option>
+                    <option value="program1">Program 1</option>
+                    <option value="program2">Program 2</option>
+                     Add more options as needed 
+                </select>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <script>
+      // Get the popup element and the close button
+      var popup = document.getElementById("popup");
+      var closeButton = document.getElementById("closePopup");
+    
+      // Open the popup
+      function openPopup() {
+        popup.style.display = "block";
+      }
+    
+      // Close the popup
+      function closePopup() {
+        popup.style.display = "none";
+      }
+    
+      // Add event listener to the close button
+      closeButton.addEventListener("click", closePopup);
+    
+      // Add event listener to open the popup (you can trigger this based on a button or any other action)
+      // Example:
+      // document.getElementById("openPopupBtn").addEventListener("click", openPopup); 
+    </script>
+    
+popup-->
+<!--new popup - appears only once per session-->
+<div id="popup" class="popup-box">
+    <div class="popup-content">
+        <!-- Popup header -->
+        <div class="popup-header">
+            <span>ADMISSION 2024-25</span>
+            <button id="closePopup" class="close-btn">&times;</button>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="popup-contact">
+            <div class="contact-item">
+                <i class="fas fa-phone me-2"></i>
+                <span><a href="tel:+02224095792">
+                    +(022) 24095792
+                </a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope me-2"></i>
+                <span><a href="mailto:hmn@college.com">
+                    hmn@college.com
+                </a></span>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Contact Number" required>
+            <input type="email" placeholder="Email Id" required>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="School Name" required>
+            <select required>
+                <option value="" disabled selected>Select Programs</option>
+                <option value="FYJC(11th)">FYJC(11th)</option>
+                <option value="SYJC(12th)">SYJC(12th)</option>
+                <!-- Add more options as needed -->
+            </select>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var popup = document.getElementById("popup");
+        var closeButton = document.getElementById("closePopup");
+
+        var popupShown = localStorage.getItem("popupShown");
+
+        if (!popupShown) {
+            openPopup();
+            localStorage.setItem("popupShown", "true");
+        }
+
+        function openPopup() {
+            popup.style.display = "block";
+        }
+
+        function closePopup() {
+            popup.style.display = "none";
+        }
+
+        closeButton.addEventListener("click", closePopup);
+    });
+</script>
+<!--popup-->
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+                            class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
+                    <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i
+                                    class="fa fa-home me-2"></i> My Dashboard</small></a>
+                        <div class="dropdown-menu rounded">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+
+                <img src="img/hmnlogo.png" alt="Logo">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">HOME</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ABOUT</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="aboutus.html" class="dropdown-item">ABOUT US
+</a>
+                            <a href="facilities.html" class="dropdown-item">FACILITIES</a>
+                            <a href="collegestaff.html" class="dropdown-item">COLLEGE STAFF</a>
+                        </div>
+                    </div>
+                    <a href="admission.html" class="nav-item nav-link">ADMISSION</a>
+                    <a href="events.html" class="nav-item nav-link">EVENTS</a>
+                    <a href="notices.html" class="nav-item nav-link">NOTICES</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OTHER PROGRAMS ON
+                            CAMPUS</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="https://bmncollege.com/" class="dropdown-item" target="_blank">HOME SCIENCE</a>
+                            <a href="https://www.bmncollege.com/programsoffered/" class="dropdown-item"
+                                target="_blank">COMPUTER APPLICATION</a>
+                            <a href="https://kgshahlawschool.com/" class="dropdown-item" target="_blank">KG SHAH LAW
+                                COLLEGE</a>
+                            <a href="https://smescon.in/" class="dropdown-item" target="_blank">NURSING</a>
+                            <a href="https://mmpshahcollege.in/" class="dropdown-item" target="_blank">ARTS AND
+                                COMMERECE</a>
+                            <a href="https://hmnscnip.in/polytechnic.php" class="dropdown-item"
+                                target="_blank">POLYTECHNIC</a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Carousel Start -->
+    <div class="carousel-header">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="3"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="4"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="img/BMN_college_files/building.jpg" class="img-fluid" alt="Image">
+
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-1" style="letter-spacing: 3px;"><br>SEVA
+                                MANDAL EDUCATION SOCIETY'S</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-3">Smt. Hiraben Manilal Nanavati Junior
+                                    College</h1>
+                            <p class="mb-5 fs-5">Aided and Affiliated to Maharashtra State Board.<br>
+                                
+                                338, R. A. Kidwai Road,<br> Matunga, Mumbai- 400 019
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="aboutus.html">
+                                    ABOUT US
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/BMN_college_files/lab.JPG" class="img-fluid" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-1" style="letter-spacing: 3px;"><br>SEVA
+                                MANDAL EDUCATION SOCIETY'S</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-3">Smt. Hiraben Manilal Nanavati Junior
+                                    College</h1>
+                            <p class="mb-5 fs-5">Aided and Affiliated to Maharashtra State Board.<br>
+                                
+                                338, R. A. Kidwai Road,<br> Matunga, Mumbai- 400 019
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="aboutus.html">
+                                 ABOUT US
+  
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/BMN_college_files/lab 2.JPG" class="img-fluid" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-1" style="letter-spacing: 3px;"><br>SEVA
+                                MANDAL EDUCATION SOCIETY'S</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-3">Smt. Hiraben Manilal Nanavati Junior
+                                    College</h1>
+                            <p class="mb-5 fs-5">Aided and Affiliated to Maharashtra State Board.<br>
+                                
+                                338, R. A. Kidwai Road,<br> Matunga, Mumbai- 400 019
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="aboutus.html">
+                                    ABOUT US
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/BMN_college_files/lab 3.JPG" class="img-fluid" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-1" style="letter-spacing: 3px;"><br>SEVA
+                                MANDAL EDUCATION SOCIETY'S</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-3">Smt. Hiraben Manilal Nanavati Junior
+                                    College</h1>
+                            <p class="mb-5 fs-5">Aided and Affiliated to Maharashtra State Board.<br>
+                                
+                                338, R. A. Kidwai Road,<br> Matunga, Mumbai- 400 019
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="aboutus.html">
+                                    ABOUT US
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/BMN_college_files/lab 4.JPG" class="img-fluid" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-1" style="letter-spacing: 3px;"><br>SEVA
+                                MANDAL EDUCATION SOCIETY'S</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-3">Smt. Hiraben Manilal Nanavati Junior
+                                    College</h1>
+                            <p class="mb-5 fs-5">Aided and Affiliated to Maharashtra State Board.<br>
+                                
+                                338, R. A. Kidwai Road,<br> Matunga, Mumbai- 400 019
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="aboutus.html">
+                                    ABOUT US
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--div class="carousel-item">
+                    <img src="img/banner6.png" class="img-fluid" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase fw-bold mb-1" style="letter-spacing: 3px;"><br>SEVA
+                                MANDAL EDUCATION SOCIETY'S</h4>
+                                <h1 class="display-2 text-capitalize text-white mb-3">Smt. Hiraben Manilal Nanavati Junior
+                                    College</h1>
+                            <p class="mb-5 fs-5">Aided and Affiliated to Maharashtra State Board.<br>
+                                
+                                338, R. A. Kidwai Road,<br> Matunga, Mumbai- 400 019
+                            </p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="aboutus.html">
+                                    ABOUT US
+    
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="false"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon btn bg-primary" aria-hidden="false"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    </div>
+    <!-- <div class="container-fluid search-bar position-relative" style="top: -50%; transform: translateY(-50%);">
+            <div class="container">
+                <div class="position-relative rounded-pill w-100 mx-auto p-5" style="background: rgba(19, 53, 123, 0.8);">
+                    <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
+                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute me-2" style="top: 50%; right: 46px; transform: translateY(-50%);">Search</button>
+                </div>
+            </div>
+        </div> -->
+    <!-- Navbar & Hero End -->
+
+    <!-- About Start -->
+    <div class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                        <img src="img/building.png" class="img-fluid w-100 h-100" alt="">
+                    </div>
+                    
+<style>
+    /* Initial state - image starts small and invisible */
+    .col-lg-5 img {
+        transform: scale(0.5); /* Image starts at 50% size */
+        opacity: 0;
+        transition: transform 3s ease-out, opacity 3s ease-out; /* Animation duration and easing */
+        border: 5px solid #13357b; /* Add a border */
+        border-radius: 30px; /* Optional: Curved corners for the border */
+        box-shadow: 0 10px 30px rgba(0.4, 0.4, 0.4, 0.4);
+
+    }
+
+    /* Final state - image at full size and visible */
+    .col-lg-5 img.show {
+        transform: scale(1); /* Image grows to its full size */
+        opacity: 1;
+    }
+    
+    /* Tilt effect on hover */
+    .col-lg-6 img:hover {
+        box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25); /* Increased shadow for 3D effect */
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const img = document.querySelector('.col-lg-5 img');
+
+        if (!img) {
+            console.error("Image element not found. Ensure the selector '.col-lg-5 img' is correct.");
+            return;
+        }
+
+        // Trigger the animation by adding the 'show' class when the page is loaded
+        img.classList.add('show');
+    });
+</script>
+                <div class="col-lg-7">
+                    <h5 class="section-about-title pe-3">ABOUT US
+</h5>
+                    <h1 class="mb-4">Welcome to <span class="text-primary">HMN College</span></h1>
+                    <p class="mb-4"><mark>Smt. Hiraben Manilal Nanavati Junior College Of Home Science With
+                            Science</mark>
+                        started in the year 1989.The past couple of years have seen a resurging of interest in the Home
+                        Science course. Students have realized the variety of opportunities the course offers. The
+                        Junior College of Home Science is no longer a limitation of a specialized course, but rather it
+                        gives the students many more options to pursue their career.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="parentbody.html">Parent Body</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutSection = document.querySelector('.container-fluid.about');
+            aboutSection.classList.add('show');
+        });
+    </script>
+    
+    <style>
+        .container-fluid.about {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 3s ease-out, opacity 1s ease-out;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0.4, 0.4, 0.4, 0.4);
+        }
+    
+        .container-fluid.about.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+    
+    <!-- About End -->
+    <!-- Tour Booking Start -->
+    <div class="container-fluid booking py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h5 class="section-booking-title pe-3">Message From Principal</h5>
+                    <h1 class="text-white mb-4">FROM THE PRINCIPAL'S DESK
+</h1>
+                    <p class="text-white mb-4">Dear Friends,</p>
+                    <p class="text-white mb-4">Greetings!</p>
+                    <p class="text-white mb-4">The academic year 2023-2024 marked the implementation of the National
+                        Education Policy (NEP 2020). Our college is among the first SNDTWU colleges to begin instruction
+                        as per the new system of higher education and we now offer several innovative learning options
+                        as per the policy. In addition to academic progression, faculty and students continued to bring
+                        laurels to the college in a variety of co-curricular activities. Students of the Department of
+                        Computer Applications participated in a co-design coding project with Wilkes University,
+                        Pennsylvania, USA. We also hosted a collaborative workshop (online) on ‘Mentoring’ in
+                        collaboration with the faculty of Wilkes University in April 2025. Another international
+                        presence was visiting scholar Dr. Delphine Munos from the University of Liege, Belgium, under a
+                        National Fund for Scientific Research (FNRS) grant. At national level, faculty and students of
+                        M.Sc in Clinical Nutrition and Dietetics participated in an exchange program with...
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="principle_desk.html">Principal’s Desk</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/principle_pic.jpg" class="img-fluid w-100 h-100" alt="">
+                </div>
+                <style>
+                    /* Slide-in animation */
+                    .col-lg-6 img {
+                        transform: translateX(100%);
+                        opacity: 0;
+                        transition: transform 5s ease-out, opacity 1s ease-out;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0.4, 0.4, 0.4, 0.4);
+                        transition: transform 0.2s ease, opacity 0.2s ease;
+                    }
+                
+                    .col-lg-6 img.show {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                
+                    /* Tilt effect on hover */
+                    .col-lg-6 img:hover {
+                        box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25); /* Increased shadow for 3D effect */
+                    }
+                </style>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const img = document.querySelector('.col-lg-6 img');
+                        img.classList.add('show');
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Tour Booking End -->
+    <!-- Packages Start
+    <div class="container-fluid packages py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h5 class="section-title px-3">Announcement</h5>
+
+            </div>
+            <div class="packages-carousel owl-carousel">
+                <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="img\BMN_college_files\BankVisit(1).jpeg" style="width: 300px; height: 340px;" class="img-fluid w-100 rounded-top" alt="Image">
+
+                        <div class="packages-price py-2 px-4">Events</div>
+                    </div>
+                    <div class="packages-content bg-light">
+
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="aboutus.html" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+    <!-- <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="C:\Users\Aastha\Desktop\new_HMN\HMNWebsite\img\1.jpeg" style="width: 300px; height: 340px;" class="img-fluid w-100 rounded-top" alt="Image">
+
+                        <div class="packages-price py-2 px-4">Posts</div>
+                    </div>
+                    <div class="packages-content bg-light">
+
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="posts.html" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+    <!-- <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="C:\Users\Aastha\Downloads\notice3.jpeg" style="width: 300px; height: 340px;"class="img-fluid w-100 rounded-top" alt="Image">
+
+                        <div class="packages-price py-2 px-4">Notices</div>
+                    </div>
+                    <div class="packages-content bg-light">
+
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="packages.html" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+    <!-- </div>
+    </div>
+    </div> -->
+    <!-- Packages End -->
+
+    
+    <!-- Travel Guide Start -->
+    <div class="container-fluid guide py-5" style="transform: translateY(100%); opacity: 0; transition: transform 3s ease-out, opacity 3s ease-out;">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h5 class="section-title px-3">Announcement</h5>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="guide-item" style="height: 450px;">
+                        <div class="guide-img" style="height: 70%; overflow: hidden;">
+                            <h2 style="padding: 10px;"><b>NOTICES</b></h2><br />
+                            <div class="guide-img-efects" style="height: calc(100% - 40px);">
+                                <img src="img\notice1.png" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                            <div class="guide-title-inner">
+                                <a href="notices.html" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="guide-item" style="height: 450px;">
+                        <div class="guide-img" style="height: 70%; overflow: hidden;">
+                            <h2 style="padding: 10px;"><b>EVENTS</b></h2><br />
+                            <div class="guide-img-efects" style="height: calc(100% - 40px);">
+                                <img src="img\BMN_college_files\CareerMela(1).jpeg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                            <div class="guide-title-inner">
+                                <a href="events.html" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="guide-item" style="height: 450px;">
+                        <div class="guide-img" style="height: 70%; overflow: hidden;">
+                            <h2 style="padding: 10px;"><b>POSTS</b></h2><br />
+                            <div class="guide-img-efects" style="height: calc(100% - 40px);">
+                                <img src="img\1.jpeg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                            </div>
+                        </div>
+                        <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                            <div class="guide-title-inner">
+                                <a href="posts.html" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const guideSection = document.querySelector('.guide');
+            guideSection.style.transform = 'translateY(0)';
+            guideSection.style.opacity = '1';
+        });
+    </script>
+        
+<!-- Travel Guide End -->
+
+    <style>
+        
+        .box {
+            width: 80%; /* Adjust the width as needed */
+            margin: 40px auto; /* Add more margin to separate the box from other elements */
+            padding: 30px 20px 20px; /* Adjust padding to create space for the icon */
+            border: 1px solid #ccc; /* Light border for structure */
+            border-radius: 10px; /* Rounded corners */
+            background: #f9f9f9; /* Light off-white background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            text-align: center;
+            position: relative; /* For icon positioning */
+        }
+
+        .box:hover {
+            transform: scale(1.05); /* Slightly enlarge the box on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensify shadow on hover */
+        }
+
+        .icon {
+            font-size: 2.5rem; /* Larger icon size for better visibility */
+            color: #f7b731; /* Gold-yellow color for the icon */
+            position: absolute; /* Position icon relative to the box */
+            top: -35px; /* Move the icon higher above the box */
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(to bottom, #ffdd00, #f7b731); /* Gradient gold color */
+            border-radius: 50%; /* Circular background */
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for the icon */
+            border: 2px solid #fff; /* Add a white border around the icon for contrast */
+        }
+
+        .content h2 {
+            font-size: 1.8rem; /* Larger heading */
+            color: #333; /* Dark gray for contrast */
+            margin-top: 20px; /* Add margin to push the heading down below the icon */
+            margin-bottom: 15px;
+        }
+
+        .content hr {
+            margin: 15px 0;
+        }
+
+        .features-list {
+            display: flex;
+            justify-content: space-between; /* Space between the two columns */
+            gap: 20px; /* Add space between columns */
+            text-align: left; /* Align text to the left */
+        }
+
+        .features-list ul {
+            width: 50%; /* Each column takes 50% width */
+            padding: 0;
+            margin: 0;
+            list-style-type: disc; /* Standard bullet points */
+            padding-left: 20px; /* Add space for bullet indentation */
+        }
+
+        .features-list li {
+            font-size: 1rem; /* Standard font size */
+            color: #555; /* Medium gray text color */
+            margin-bottom: 10px; /* Space between items */
+        }
+
+        @media (max-width: 768px) {
+            .features-list {
+                flex-direction: column; /* Stack columns on smaller screens */
+            }
+
+            .features-list ul {
+                width: 100%; /* Make columns full-width */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+
+            .icon {
+                font-size: 2rem; /* Reduce icon size */
+                top: -25px; /* Adjust icon position */
+            }
+
+            .content h2 {
+                font-size: 1.5rem; /* Adjust heading size */
+            }
+        }
+
+        </style>
+        
+        <div class="box">
+            <i class="icon fas fa-chalkboard-teacher"></i>
+            <div class="content">
+                <h2>UNIQUE FEATURES</h2>
+                <hr style="border: none; height: 2px; background: linear-gradient(to right, red, yellow, darkblue);">
+                <div class="features-list">
+                    <ul>
+                        <li>FOCUS ON ACADEMIC EXCELLENCE</li>
+                        <li>STUDENT ORIENTED TEACHING</li>
+                        <li>DEDICATED TEACHERS</li>
+                        <li>GREEN CLUB</li>
+                        <li>SPORTS</li>
+                        <li>NSS</li>
+                        <li>CAREER COUNSELLING</li>
+                        <li>SMART CLASSROOMS</li>
+                        <li>LIBRARY FACILITIES</li>                       
+                    </ul>
+                    <ul>
+                        <li>COUNSELLOR ON CAMPUS</li>
+                        <li>KARATE / SELF DEFENCE</li>
+                        <li>CULTURAL ACTIVITIES</li>
+                        <li>LANGUAGE CLUB</li>
+                        <li>NCC</li>
+                        <li>SEMINARS & WORKSHOPS</li>
+                        <li>HEALTH COUNSELLING</li>
+                        <li>GYMNASIUM</li>
+                        <li>FIELD VISITS AND EXCURSIONS</li>   
+                        <li>UPGRADED LABORATORY</li>
+                    </ul>
+                </div>
+            </div>
+        </div>        
+                
+        
+<br/><br/>
+<!-- Notable Alumnae Start 
+<div class="container-fluid guide py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">Notable Alumnae</h5>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a1.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a2.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a3.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a4.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+2nd part starts 
+<div class="container-fluid guide py-5">
+    <div class="container py-5">
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a5.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a6.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a7.jpg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a8.jpeg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+     3nd part starts -->
+
+<!--<div class="container-fluid guide py-5">
+    <div class="container py-5">
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a9.jpeg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a10.jpeg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a11.jpeg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="guide-item" style="height: 400px;">
+                    <div class="guide-img" style="height: 70%; overflow: hidden;">
+                        <div class="guide-img-efects" style="height: 100%;">
+                            <img src="img/BMN_college_files/a12.jpeg"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                        </div>
+                    </div>
+                    <div class="guide-title text-center rounded-bottom p-4" style="height: 30%;">
+                        <div class="guide-title-inner">
+                            <h4 class="mt-3">Full Name</h4>
+                            <p class="mb-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ Notable Alumnae End -->
+
+    <!-- Tour Booking Start -->
+    <!-- <div class="container-fluid booking py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h5 class="section-booking-title pe-3">Booking</h5>
+                    <h1 class="text-white mb-4">Online appointment</h1>
+                    <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+                        maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus
+                        praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
+                    </p>
+                    <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+                        maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus
+                        praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
+                    </p>
+                    <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="text-white mb-3">Book A Tour Deals</h1>
+                    <p class="text-white mb-4">Get <span class="text-warning">50% Off</span> On Your First Adventure
+                        Trip With Travela. Get More Deal Offers Here.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-white border-0" id="name"
+                                        placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-white border-0" id="email"
+                                        placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating date" id="date3" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-white border-0" id="datetime"
+                                        placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                    <label for="datetime">Date & Time</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select bg-white border-0" id="select1">
+                                        <option value="1">Destination 1</option>
+                                        <option value="2">Destination 2</option>
+                                        <option value="3">Destination 3</option>
+                                    </select>
+                                    <label for="select1">Destination</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select bg-white border-0" id="SelectPerson">
+                                        <option value="1">Persons 1</option>
+                                        <option value="2">Persons 2</option>
+                                        <option value="3">Persons 3</option>
+                                    </select>
+                                    <label for="SelectPerson">Persons</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select bg-white border-0" id="CategoriesSelect">
+                                        <option value="1">Kids</option>
+                                        <option value="2">1</option>
+                                        <option value="3">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    <label for="CategoriesSelect">Categories</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control bg-white border-0" placeholder="Special Request"
+                                        id="message" style="height: 100px"></textarea>
+                                    <label for="message">Special Request</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Tour Booking End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Column 1: Location, Address, Mobile Number, Email -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Get In Touch</h4>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.767730043448!2d72.85765067438115!3d19.02854541386988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2f051bdd6f%3A0xf26f202e33ba0e2b!2sDr.%20BMN%20College%20of%20Home%20Science!5e0!3m2!1sen!2sin!4v1682412382911!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p class="mt-3" style="font-size: 16px;">
+                            <i class="fas fa-home me-2"></i> 338, R. A. Kidwai Road, <br> Matunga, Mumbai-400 019
+                        </p>
+                        <a href="tel:+02224095792" class="text-white mt-2" style="font-size: 16px;">
+                            <i class="fas fa-phone me-2"></i> +(022) 24095792
+                        </a>
+                        <a href="mailto:hmn@college.com" class="text-white mt-2" style="font-size: 16px;">
+                            <i class="fas fa-envelope me-2"></i> hmn@college.com
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Quick Links</h4>
+                        <a href="index.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> HOME</a>
+                        <a href="aboutus.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> ABOUT</a>
+                        <a href="facilities.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> FACILITIES</a>
+                        <a href="admission.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> ADMISSION</a>
+                        <a href="events.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> EVENTS</a>
+                        <a href="notice.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> NOTICES</a>
+                        <a href="contact.html" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> CONTACT</a>
+                        
+                    </div>
+                </div>
+                <!-- Column 3: Important Links -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Important Links</h4>
+                        <a href="https://www.maharashtra.gov.in/1125/Home" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> Government of Maharashtra
+                        </a>
+                        <a href="https://sndt.ac.in/" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> SNDT Women's University
+                        </a>
+                        <a href="https://www.education.gov.in/en" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> Ministry of Education
+                        </a>
+                        <a href="https://scholarships.gov.in/" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> National Scholarship Portal
+                        </a>
+                        <a href="https://www.academicdepository.com/NAD/uidStudentReg.action?activePage=regactuidStudentReg" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> National Academic Depository
+                        </a>
+                        <a href="http://rusa.nic.in/" target="_blank" style="font-size: 16px;">
+                            <i class="fas fa-angle-right me-2"></i> Rashtriya Uchchatar Shiksha Abhiyan
+                        </a>
+                    </div>
+                </div>
+                <!-- Column 4: Quick Links -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4" style="color: #f39c12;">Other Programs on Campus</h4>
+                        <a href="https://bmncollege.com/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> HOME SCIENCE</a>
+                        <a href="https://www.bmncollege.com/programsoffered/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> COMPUTER APPLICATION</a>
+                        <a href="https://kgshahlawschool.com/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> KG SHAH LAW COLLEGE</a>
+                        <a href="https://smescon.in/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> NURSING</a>
+                        <a href="https://mmpshahcollege.in/" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> ARTS AND COMMERCE</a>
+                        <a href="https://hmnscnip.in/polytechnic.php" style="font-size: 16px;"><i class="fas fa-angle-right me-2"></i> POLYTECHNIC</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right
+                    reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+                    <!-- Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="cs/script.js"></script>
+</body>
+
+</html>
